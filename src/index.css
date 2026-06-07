@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* ===== Design System: Custom Theme ===== */
+@theme {
+  /* Brand Colors */
+  --color-brand-green-50: #F0FDF4;
+  --color-brand-green-100: #DCFCE7;
+  --color-brand-green-200: #BBF7D0;
+  --color-brand-green-500: #22C55E;
+  --color-brand-green-600: #16A34A;
+  --color-brand-green-700: #15803D;
+
+  --color-brand-blue-50: #EFF6FF;
+  --color-brand-blue-100: #DBEAFE;
+  --color-brand-blue-500: #3B82F6;
+  --color-brand-blue-600: #2563EB;
+  --color-brand-blue-700: #1D4ED8;
+
+  --color-brand-amber-50: #FFFBEB;
+  --color-brand-amber-400: #FBBF24;
+  --color-brand-amber-600: #D97706;
+
+  --color-surface-soft: #F8FAFB;
+  --color-surface-warm: #FDFCFA;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 10px 25px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.04);
+  --shadow-nav: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-modal: 0 25px 50px rgba(0,0,0,0.25);
+  --shadow-fab: 0 4px 12px rgba(0,0,0,0.15);
+
+  /* Font families */
+  --font-heading: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-marathi: 'Noto Sans Devanagari', sans-serif;
+}
+
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #1F2937;
+  background-color: #FFFFFF;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: #111827;
+}
+
+/* ===== Section Container — generous padding ===== */
+.section-container {
+  max-width: 76rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Veg / Non-Veg indicators */
+.veg-dot::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #16A34A;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.nonveg-dot::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #DC2626;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+/* Hide scrollbar on horizontal scroll sections */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

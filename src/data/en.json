@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "restaurant": "Restaurant & Menu",
+    "packages": "Packages",
+    "experiences": "Experiences",
+    "gallery": "Gallery",
+    "nearby": "Nearby Attractions",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "callUs": "Call Us"
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "Escape the City. Enjoy Nature.",
+        "subtitle": "A peaceful farm stay near Pune — just 30 minutes from Sinhagad Fort"
+      },
+      {
+        "title": "Good Food, Comfortable Stay",
+        "subtitle": "Home-style Maharashtrian meals with fresh farm ingredients"
+      },
+      {
+        "title": "Stay Under the Stars",
+        "subtitle": "Experience tent camping with bonfire, nature walks, and more"
+      },
+      {
+        "title": "Fun for the Whole Family",
+        "subtitle": "Garden, play area, open space — kids love Jawalkar Farms"
+      }
+    ],
+    "ctaRooms": "Explore Rooms",
+    "ctaMenu": "View Menu"
+  },
+  "highlights": {
+    "title": "Why Jawalkar Farms?",
+    "items": [
+      { "title": "Nature & Greenery", "desc": "Surrounded by lush green farms and peaceful countryside" },
+      { "title": "Maharashtrian Food", "desc": "Authentic home-style veg & non-veg meals, freshly prepared" },
+      { "title": "Comfortable Rooms", "desc": "Clean, spacious rooms with all basic facilities for families" },
+      { "title": "Tent Camping", "desc": "Sleep under the stars with bonfire and nature sounds" }
+    ]
+  },
+  "facilities": {
+    "title": "Everything You Need",
+    "subtitle": "We've got you covered for a perfect stay",
+    "items": [
+      "Comfortable Rooms",
+      "Maharashtrian Food",
+      "Tent Camping",
+      "Children's Play Area",
+      "Outdoor Dining",
+      "Garden & Green Space",
+      "Free Parking",
+      "Event Space"
+    ]
+  },
+  "experiences": {
+    "title": "Things to Do",
+    "subtitle": "Create memorable moments at Jawalkar Farms",
+    "items": [
+      { "title": "Tent Camping", "desc": "Sleep under the stars with comfortable tents, bonfire, and the sounds of nature all around you." },
+      { "title": "Outdoor Dining", "desc": "Enjoy freshly cooked meals in our open-air dining area surrounded by greenery and fresh air." },
+      { "title": "Children's Play Area", "desc": "A safe outdoor play space with swings, open ground, and plenty of room for kids to run and play." },
+      { "title": "Garden Walks", "desc": "Take a peaceful stroll through our green garden and enjoy the calm countryside atmosphere." },
+      { "title": "Family Gatherings", "desc": "Celebrate birthdays, anniversaries, or simply enjoy quality time with your loved ones." },
+      { "title": "Events & Parties", "desc": "Host small parties, team outings, or celebrations in our spacious outdoor event area." }
+    ]
+  },
+  "food": {
+    "title": "Taste of Maharashtra",
+    "subtitle": "Fresh, home-style cooking with farm ingredients",
+    "desc": "Our kitchen serves authentic Maharashtrian food — from spicy Kolhapuri chicken to comforting dal-rice. Every meal is prepared fresh with love and local spices.",
+    "ctaMenu": "View Full Menu"
+  },
+  "room": {
+    "title": "Comfortable Rooms",
+    "subtitle": "Clean, spacious, and family-friendly",
+    "desc": "Our rooms are designed for comfort and relaxation. Clean linens, attached bathroom, and a view of the surrounding greenery — everything you need for a restful stay.",
+    "features": [
+      "Spacious room for family",
+      "Attached bathroom",
+      "Clean bed linens",
+      "Fan / AC option",
+      "Hot water",
+      "Free parking",
+      "Garden access"
+    ],
+    "price": "₹2,000",
+    "priceUnit": "per night",
+    "extraBed": "Extra bed available at ₹500/night",
+    "checkin": "Check-in: 12 PM",
+    "checkout": "Check-out: 11 AM",
+    "ctaBook": "Inquire to Book",
+    "amenities": ["Bathroom", "Parking", "Tea/Coffee", "Garden Access", "Hot Water"]
+  },
+  "nearby": {
+    "title": "Explore the Area",
+    "subtitle": "Popular places near Jawalkar Farms"
+  },
+  "reviewsSection": {
+    "title": "What Our Guests Say",
+    "subtitle": "Real experiences from real families"
+  },
+  "cta": {
+    "title": "Ready to Plan Your Visit?",
+    "subtitle": "Call us, message on WhatsApp, or send an inquiry",
+    "call": "Call Us",
+    "whatsapp": "WhatsApp",
+    "inquiry": "Send Inquiry"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you",
+    "phone": "Call Us",
+    "whatsapp": "WhatsApp",
+    "email": "Email Us",
+    "address": "Our Address",
+    "formTitle": "Send an Inquiry",
+    "formFields": {
+      "name": "Your Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "checkin": "Check-in Date",
+      "guests": "Number of Guests",
+      "message": "Your Message"
+    },
+    "submit": "Send Inquiry",
+    "directions": "Get Directions",
+    "hours": "Operating Hours",
+    "hoursDetail": "Restaurant: 8 AM – 10 PM | Check-in: 12 PM | Check-out: 11 AM"
+  },
+  "packages": {
+    "title": "Our Packages",
+    "subtitle": "Choose the perfect experience for you",
+    "note": "Prices may vary by season. Contact us for exact rates.",
+    "ctaHelp": "Can't decide? Call us and we'll help you plan."
+  },
+  "gallery": {
+    "title": "Our Gallery",
+    "subtitle": "See what awaits you at Jawalkar Farms",
+    "all": "All",
+    "rooms": "Rooms",
+    "food": "Food",
+    "camping": "Camping",
+    "garden": "Garden",
+    "events": "Events"
+  },
+  "footer": {
+    "tagline": "A peaceful farm stay and restaurant near Pune",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "followUs": "Follow Us",
+    "rights": "© 2024 Jawalkar Farms. All rights reserved."
+  }
+}
