@@ -15,7 +15,7 @@ export const attractions = [
   },
   {
     id: 3,
-    name: 'Shanti Niketan',
+    name: 'Shanti Vaan',
     distance: '5 km',
     time: '~15 min drive',
     desc: 'Peaceful ashram and meditation center. Ideal for those seeking quiet contemplation and spiritual rest.',

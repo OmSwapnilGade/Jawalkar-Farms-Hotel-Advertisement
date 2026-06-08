@@ -5,10 +5,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 
 const slideImages = [
-  { gradient: 'linear-gradient(135deg, #1a4731 0%, #2d6a4f 40%, #40916c 100%)', icon: '🌿' },
-  { gradient: 'linear-gradient(135deg, #7c2d12 0%, #b45309 40%, #d97706 100%)', icon: '🍽️' },
-  { gradient: 'linear-gradient(135deg, #0c2d48 0%, #1a5276 40%, #2980b9 100%)', icon: '⛺' },
-  { gradient: 'linear-gradient(135deg, #0b3d0b 0%, #1a7a1a 40%, #2ecc71 100%)', icon: '👨‍👩‍👧‍👦' },
+  { image: '/images/hero/greenery scene.jpeg', gradient: 'linear-gradient(135deg, #1a4731 0%, #2d6a4f 40%, #40916c 100%)', icon: '🌿' },
+  { image: '/images/hero/food.jpeg', gradient: 'linear-gradient(135deg, #7c2d12 0%, #b45309 40%, #d97706 100%)', icon: '🍽️' },
+  { image: '/images/hero/night scene.jpeg', gradient: 'linear-gradient(135deg, #0c2d48 0%, #1a5276 40%, #2980b9 100%)', icon: '⛺' },
+  { image: '/images/hero/room photo.jpeg', gradient: 'linear-gradient(135deg, #3d2c1d 0%, #6e4e37 40%, #8b6b53 100%)', icon: '🛏️' },
+  { image: '/images/hero/children pay area.jpeg', gradient: 'linear-gradient(135deg, #0b3d0b 0%, #1a7a1a 40%, #2ecc71 100%)', icon: '👨‍👩‍👧‍👦' },
 ]
 
 export default function HeroSlider() {
@@ -30,7 +31,7 @@ export default function HeroSlider() {
   }, [next])
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] max-h-[900px] overflow-hidden" id="hero">
+    <section className="relative w-full h-[100vh] min-h-[600px] max-h-[900px] overflow-hidden" id="hero">
       {/* Slides */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -39,8 +40,11 @@ export default function HeroSlider() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.2 }}
-          className="absolute inset-0"
-          style={{ background: slideImages[current].gradient }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: slideImages[current].image ? `url('${slideImages[current].image}')` : slideImages[current].gradient,
+            backgroundColor: '#2d6a4f'
+          }}
         >
           {/* Decorative background icon */}
           <div className="absolute inset-0 flex items-center justify-center">

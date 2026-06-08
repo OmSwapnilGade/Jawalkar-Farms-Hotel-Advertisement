@@ -14,9 +14,9 @@ export default function HomePage() {
       <HeroSlider />
       <HighlightsSection />
       <FacilitiesSection />
-      <ExperiencesPreview />
       <FoodShowcase />
       <RoomShowcase />
+      <ExperiencesPreview />
       <NearbyPreview />
       <ReviewsPreview />
       <CTABand />
