@@ -5,11 +5,7 @@ import { useLanguage } from '../../context/LanguageContext.jsx'
 import { attractions } from '../../data/attractions.js'
 import SectionHeader from '../layout/SectionHeader.jsx'
 
-const gradients = [
-  'from-emerald-300 to-teal-500',
-  'from-sky-300 to-blue-500',
-  'from-violet-300 to-purple-500',
-]
+// Images are now loaded directly from attractions.js
 
 export default function NearbyPreview() {
   const { t } = useLanguage()
@@ -29,8 +25,9 @@ export default function NearbyPreview() {
               transition={{ duration: 0.5, delay: i * 0.12 }}
               className="rounded-2xl overflow-hidden bg-white shadow-card hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 group"
             >
-              <div className={`h-48 sm:h-52 bg-gradient-to-br ${gradients[i]} flex items-center justify-center relative`}>
-                <MapPin size={56} className="text-white/25" />
+              <div className="h-48 sm:h-52 bg-gray-100 flex items-center justify-center relative overflow-hidden">
+                <img src={place.image} alt={place.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 <span className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm text-xs font-bold px-3 py-1.5 rounded-full text-gray-700 shadow-sm">
                   📍 {place.distance}
                 </span>

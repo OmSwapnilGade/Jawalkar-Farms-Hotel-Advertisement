@@ -45,8 +45,8 @@ export default function RoomShowcase() {
 
           {/* Image */}
           <motion.div {...slideInRight} className="order-1 lg:order-2 relative">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-blue-200 via-blue-300 to-indigo-400 flex items-center justify-center shadow-xl">
-              <span className="text-[7rem] sm:text-[9rem]">🛏️</span>
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100 flex items-center justify-center shadow-xl">
+              <img src="/images/hero/room photo.jpeg" alt="Comfortable Room" className="w-full h-full object-cover" />
             </div>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}

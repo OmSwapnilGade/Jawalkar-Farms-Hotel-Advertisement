@@ -13,8 +13,8 @@ export default function FoodShowcase() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           {/* Image */}
           <motion.div {...slideInLeft} className="relative">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-amber-200 via-orange-300 to-amber-400 flex items-center justify-center shadow-xl">
-              <span className="text-[7rem] sm:text-[9rem]">🍽️</span>
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100 flex items-center justify-center shadow-xl">
+              <img src="/images/hero/food.jpeg" alt="Maharashtrian Food" className="w-full h-full object-cover" />
             </div>
             {/* Floating badge */}
             <motion.div

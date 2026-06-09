@@ -4,16 +4,15 @@ import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import SectionHeader from '../layout/SectionHeader.jsx'
 
-const colors = [
-  'from-emerald-400 to-teal-600',
-  'from-amber-400 to-orange-500',
-  'from-sky-400 to-blue-500',
-  'from-green-400 to-emerald-600',
-  'from-rose-400 to-pink-500',
-  'from-violet-400 to-purple-500',
-  'from-cyan-400 to-cyan-600'
+const images = [
+  '/images/hero/tents.jpeg', // Tent Camping
+  '/images/hero/food.jpeg', // Outdoor Dining (reusing food.jpeg for now)
+  '/images/hero/children pay area.jpeg', // Children's Play Area
+  '/images/hero/greenery scene.jpeg', // Garden Walks
+  '/images/morning1.jpeg', // Family Gatherings
+  '/images/night2.jpeg', // Events & Parties
+  '/images/ChatGPT swim.png' // Swimming Pool
 ]
-const emojis = ['⛺', '🍽️', '🎮', '🌿', '👨‍👩‍👧‍👦', '🎉', '🏊‍♂️']
 
 export default function ExperiencesPreview() {
   const { t } = useLanguage()
@@ -35,8 +34,8 @@ export default function ExperiencesPreview() {
               className="group"
             >
               <div className="rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 bg-white">
-                <div className={`h-52 sm:h-56 bg-gradient-to-br ${colors[i]} flex items-center justify-center relative overflow-hidden`}>
-                  <span className="text-7xl sm:text-8xl opacity-70 group-hover:scale-110 transition-transform duration-500">{emojis[i]}</span>
+                <div className="h-52 sm:h-56 bg-gray-100 flex items-center justify-center relative overflow-hidden">
+                  <img src={images[i]} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="p-6 sm:p-7">
                   <h3 className="font-heading text-lg font-bold text-gray-900 mb-2.5">{item.title}</h3>

@@ -5,13 +5,15 @@ export const attractions = [
     distance: '12 km',
     time: '~30 min drive',
     desc: 'Historic hill fort with panoramic views of the Sahyadri range. Popular trekking spot with food stalls at the top.',
+    image: '/images/hero/sinhagad.jpeg'
   },
   {
-    id: 2,
+    id: 2, 
     name: 'Khadakwasla Dam',
     distance: '8 km',
     time: '~20 min drive',
     desc: 'Beautiful dam and lake surrounded by hills. Perfect for an evening visit with stunning sunset views.',
+    image: '/images/khadakwasla.jpeg'
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const attractions = [
     distance: '5 km',
     time: '~15 min drive',
     desc: 'Peaceful ashram and meditation center. Ideal for those seeking quiet contemplation and spiritual rest.',
+    image: '/images/shantivan.jpeg'
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const attractions = [
     distance: '20 km',
     time: '~45 min drive',
     desc: 'Scenic dam surrounded by lush hills. Water sports like kayaking and speed boating are available.',
+    image: '/images/hero/placeholder-panshet.jpg'
   },
   {
     id: 5,
@@ -33,5 +37,6 @@ export const attractions = [
     distance: '15 km',
     time: '~35 min drive',
     desc: 'Ancient Shiva temple nestled in the hills with peaceful surroundings and scenic trek route.',
+    image: '/images/hero/placeholder-temple.jpg'
   },
 ]
