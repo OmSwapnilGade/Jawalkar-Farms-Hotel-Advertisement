@@ -10,7 +10,7 @@ export default function FacilitiesSection() {
   const items = t('facilities.items')
 
   return (
-    <section className="py-20 sm:py-24 lg:py-32 bg-surface-soft">
+    <section className="mt-8 pt-24 pb-20 sm:pt-32 sm:pb-24 lg:pt-36 lg:pb-32 bg-gray-50 border-t border-gray-200">
       <div className="section-container">
         <SectionHeader title={t('facilities.title')} subtitle={t('facilities.subtitle')} />
 

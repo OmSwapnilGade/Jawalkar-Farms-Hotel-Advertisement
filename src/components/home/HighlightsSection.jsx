@@ -16,14 +16,14 @@ export default function HighlightsSection() {
   const items = t('highlights.items')
 
   return (
-    <section className="py-20 sm:py-24 lg:py-32 bg-white">
+    <section className="py-28 sm:py-24 lg:py-32 bg-white">
       <div className="section-container">
         <SectionHeader title={t('highlights.title')} />
 
         <div className="mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {Array.isArray(items) && items.map((item, i) => {
             const Icon = icons[i]
-            const color = colors[i]
+            const color = colors[i] 
             return (
               <motion.div
                 key={i}
