@@ -5,7 +5,7 @@ export const attractions = [
     distance: '12 km',
     time: '~30 min drive',
     desc: 'Historic hill fort with panoramic views of the Sahyadri range. Popular trekking spot with food stalls at the top.',
-    image: '/images/hero/sinhagad.jpeg'
+    image: '/images/hero/sinhgad.jpeg'
   },
   {
     id: 2, 
