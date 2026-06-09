@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
-import { Bed, UtensilsCrossed, Tent, Baby, Sun, TreePine, Car, PartyPopper } from 'lucide-react'
+import { Bed, UtensilsCrossed, Tent, Baby, Sun, TreePine, Car, PartyPopper, Waves } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import SectionHeader from '../layout/SectionHeader.jsx'
 
-const facilityIcons = [Bed, UtensilsCrossed, Tent, Baby, Sun, TreePine, Car, PartyPopper]
+const facilityIcons = [Bed, UtensilsCrossed, Tent, Baby, Sun, TreePine, Car, PartyPopper, Waves]
 
 export default function FacilitiesSection() {
   const { t } = useLanguage()

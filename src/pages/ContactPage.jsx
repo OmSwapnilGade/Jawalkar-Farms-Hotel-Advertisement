@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Phone, MessageCircle, Mail, MapPin, Clock, Send } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext.jsx'
-import { PHONE_NUMBER, PHONE_LINK, WHATSAPP_LINK, EMAIL, ADDRESS, GOOGLE_MAPS_EMBED } from '../utils/constants.js'
+import { PHONE_NUMBER, PHONE_LINK, WHATSAPP_LINK, WHATSAPP_NUMBER, EMAIL, ADDRESS, GOOGLE_MAPS_EMBED } from '../utils/constants.js'
 import PageBanner from '../components/layout/PageBanner.jsx'
 import { fadeUp } from '../hooks/useAnimations.js'
 
@@ -14,8 +14,26 @@ export default function ContactPage() {
   const handleChange = (e) => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   const handleSubmit = (e) => {
     e.preventDefault()
+    
+    const message = `*New Inquiry from Website* 🌿
+    
+*Name:* ${form.name}
+*Phone:* ${form.phone}
+*Email:* ${form.email || 'N/A'}
+*Check-in:* ${form.checkin || 'Not specified'}
+*Guests:* ${form.guests || 'Not specified'}
+
+*Message:* 
+${form.message || 'No message provided'}`
+
+    const encodedMessage = encodeURIComponent(message)
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank')
+
     setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 4000)
+    setTimeout(() => {
+      setSubmitted(false)
+      setForm({ name: '', phone: '', email: '', checkin: '', guests: '', message: '' })
+    }, 4000)
   }
 
   const contactCards = [
@@ -70,7 +88,7 @@ export default function ContactPage() {
                   <div className="text-center py-16">
                     <span className="text-6xl mb-5 block">✅</span>
                     <p className="font-heading text-2xl font-bold text-gray-900 mb-3">Thank you!</p>
-                    <p className="text-gray-500 text-lg">Your inquiry has been sent. We'll get back to you soon.</p>
+                    <p className="text-gray-500 text-lg">Opening WhatsApp to send your inquiry...</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">

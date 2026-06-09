@@ -11,8 +11,9 @@ const colors = [
   'from-green-400 to-emerald-600',
   'from-rose-400 to-pink-500',
   'from-violet-400 to-purple-500',
+  'from-cyan-400 to-cyan-600'
 ]
-const emojis = ['⛺', '🍽️', '🎮', '🌿', '👨‍👩‍👧‍👦', '🎉']
+const emojis = ['⛺', '🍽️', '🎮', '🌿', '👨‍👩‍👧‍👦', '🎉', '🏊‍♂️']
 
 export default function ExperiencesPreview() {
   const { t } = useLanguage()
@@ -24,7 +25,7 @@ export default function ExperiencesPreview() {
         <SectionHeader title={t('experiences.title')} subtitle={t('experiences.subtitle')} />
 
         <div className="mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {Array.isArray(items) && items.slice(0, 6).map((item, i) => (
+          {Array.isArray(items) && items.slice(0, 9).map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}

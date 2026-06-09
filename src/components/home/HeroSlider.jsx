@@ -34,6 +34,7 @@ export default function HeroSlider() {
     <section className="relative w-full h-[99vh] min-h-[600px] max-h-[900px] overflow-hidden" id="hero">
       {/* Slides */}
       <AnimatePresence mode="wait">
+        
         <motion.div
           key={current}
           initial={{ opacity: 0, scale: 1.08 }}

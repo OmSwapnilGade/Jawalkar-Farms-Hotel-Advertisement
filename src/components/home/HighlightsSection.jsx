@@ -16,7 +16,7 @@ export default function HighlightsSection() {
   const items = t('highlights.items')
 
   return (
-    <section className="py-28 sm:py-24 lg:py-32 bg-white">
+    <section className="py-28 sm:py-24 lg:py-32 bg-white mb-8 lg:mb-12">
       <div className="section-container">
         <SectionHeader title={t('highlights.title')} />
 

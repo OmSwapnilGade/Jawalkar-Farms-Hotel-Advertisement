@@ -57,7 +57,8 @@
       "Outdoor Dining",
       "Garden & Green Space",
       "Free Parking",
-      "Event Space"
+      "Event Space",
+      "Swimming Pool"
     ]
   },
   "experiences": {
@@ -69,7 +70,8 @@
       { "title": "Children's Play Area", "desc": "A safe outdoor play space with swings, open ground, and plenty of room for kids to run and play." },
       { "title": "Garden Walks", "desc": "Take a peaceful stroll through our green garden and enjoy the calm countryside atmosphere." },
       { "title": "Family Gatherings", "desc": "Celebrate birthdays, anniversaries, or simply enjoy quality time with your loved ones." },
-      { "title": "Events & Parties", "desc": "Host small parties, team outings, or celebrations in our spacious outdoor event area." }
+      { "title": "Events & Parties", "desc": "Host small parties, team outings, or celebrations in our spacious outdoor event area." },
+      { "title": "Swimming Pool", "desc": "Take a refreshing dip in our pristine swimming pool and relax by the water." }
     ]
   },
   "food": {
