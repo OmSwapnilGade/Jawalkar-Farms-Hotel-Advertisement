@@ -7,10 +7,10 @@ import CTABand from '../components/layout/CTABand.jsx'
 import { fadeUp } from '../hooks/useAnimations.js'
 
 const tabs = [
-  { key: 'veg', label: 'Veg 🌿', labelMr: 'शाकाहारी 🌿' },
-  { key: 'nonveg', label: 'Non-Veg 🍗', labelMr: 'मांसाहारी 🍗' },
-  { key: 'thali', label: 'Thali 🍽️', labelMr: 'थाळी 🍽️' },
-  { key: 'specials', label: 'Specials ⭐', labelMr: 'स्पेशल ⭐' },
+  { key: 'veg', label: 'Veg 🌿', labelMr: 'शाकाहारी 🌿', labelHi: 'शाकाहारी 🌿' },
+  { key: 'nonveg', label: 'Non-Veg 🍗', labelMr: 'मांसाहारी 🍗', labelHi: 'मांसाहारी 🍗' },
+  { key: 'thali', label: 'Thali 🍽️', labelMr: 'थाळी 🍽️', labelHi: 'थाली 🍽️' },
+  { key: 'specials', label: 'Specials ⭐', labelMr: 'स्पेशल ⭐', labelHi: 'स्पेशल ⭐' },
 ]
 
 const categoryGradients = {
@@ -57,7 +57,7 @@ export default function RestaurantPage() {
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
-                {lang === 'mr' ? tab.labelMr : tab.label}
+                {lang === 'mr' ? tab.labelMr : lang === 'hi' ? tab.labelHi : tab.label}
               </button>
             ))}
           </div>
