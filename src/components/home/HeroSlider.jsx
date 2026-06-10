@@ -73,13 +73,13 @@ export default function HeroSlider() {
             transition={{ duration: 0.6 }}
             className="
         relative
-        w-[90%]
-        max-w-2xl
+        w-full
+        max-w-md
         bg-black/20
         backdrop-blur-2xl
         border border-white/20
         rounded-2xl
-        p-5 sm:p-6 lg:p-8
+        p-4 sm:p-5
         shadow-2xl
       "
           >
@@ -92,12 +92,12 @@ export default function HeroSlider() {
               className="
           font-heading
           text-2xl
-          sm:text-5xl
-          lg:text-7xl
+          sm:text-4xl
+          lg:text-5xl
           font-bold
           !text-white
           mb-2
-          sm:mb-4
+          sm:mb-3
           leading-[1.1]
           tracking-tight
           drop-shadow-lg
@@ -109,13 +109,13 @@ export default function HeroSlider() {
             <motion.p
               className="
           !text-white/95
-          text-xs
-          sm:text-lg
-          lg:text-2xl
+          text-sm
+          sm:text-base
+          lg:text-lg
           mb-4
-          sm:mb-6
+          sm:mb-5
           leading-relaxed
-          max-w-2xl
+          max-w-md
           mx-auto
           lg:mx-0
           drop-shadow-md
@@ -124,7 +124,7 @@ export default function HeroSlider() {
               {Array.isArray(slides) ? slides[current]?.subtitle : ''}
             </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center lg:justify-start">
               <Link
                 to="/rooms"
                 className="
@@ -134,13 +134,14 @@ export default function HeroSlider() {
             bg-brand-green-600
             hover:bg-brand-green-700
             text-white
-            px-6
-            py-3
-            rounded-xl
-            font-semibold
+            text-sm
+            px-4
+            py-2
+            rounded-lg
+            font-medium
             transition-all
             duration-300
-            hover:-translate-y-1
+            hover:-translate-y-0.5
           "
               >
                 {t('hero.ctaRooms')}
@@ -157,14 +158,15 @@ export default function HeroSlider() {
             border
             border-white/30
             text-white
-            px-6
-            py-3
-            rounded-xl
+            text-sm
+            px-4
+            py-2
+            rounded-lg
             backdrop-blur-sm
-            font-semibold
+            font-medium
             transition-all
             duration-300
-            hover:-translate-y-1
+            hover:-translate-y-0.5
           "
               >
                 {t('hero.ctaMenu')}

@@ -63,7 +63,7 @@ export default function GalleryPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: i * 0.04 }}
                     className={`${h} rounded-2xl overflow-hidden cursor-pointer group relative break-inside-avoid`}
-                    style={{ background: getPlaceholderGradient(img.category) }}
+                    style={{ background: img.image ? `url('${img.image}') center/cover` : getPlaceholderGradient(img.category) }}
                     onClick={() => openLightbox(i)}
                   >
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
@@ -115,7 +115,7 @@ export default function GalleryPage() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
               className="w-full max-w-5xl aspect-[16/10] rounded-3xl overflow-hidden"
-              style={{ background: getPlaceholderGradient(filtered[lightboxIndex]?.category) }}
+              style={{ background: filtered[lightboxIndex]?.image ? `url('${filtered[lightboxIndex]?.image}') center/cover` : getPlaceholderGradient(filtered[lightboxIndex]?.category) }}
               onClick={(e) => e.stopPropagation()}
             >
               <div className="w-full h-full flex items-center justify-center">

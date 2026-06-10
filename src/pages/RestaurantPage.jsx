@@ -62,7 +62,7 @@ export default function RestaurantPage() {
             ))}
           </div>
 
-          {/* Grid */}
+          {/* Table */}
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -70,33 +70,50 @@ export default function RestaurantPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7"
+              className="w-full max-w-4xl mx-auto overflow-hidden bg-white shadow-card rounded-2xl"
             >
-              {filtered.map((item, i) => (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.06 }}
-                  className={`rounded-2xl overflow-hidden bg-white shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 ${item.featured ? 'ring-2 ring-brand-amber-400 ring-offset-2' : ''}`}
-                >
-                  <div className={`h-40 sm:h-44 bg-gradient-to-br ${categoryGradients[item.category]} flex items-center justify-center relative`}>
-                    <span className="text-6xl opacity-60">{categoryEmojis[item.category]}</span>
-                    {item.featured && (
-                      <span className="absolute top-3 right-3 bg-brand-amber-400 text-xs font-bold px-3 py-1.5 rounded-full text-white shadow-sm">⭐ SPECIAL</span>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-start justify-between gap-3 mb-3">
-                      <h3 className={`font-heading font-bold text-gray-900 ${item.isVeg ? 'veg-dot' : 'nonveg-dot'}`}>
-                        {item.name}
-                      </h3>
-                      <span className="font-heading text-lg font-bold text-brand-amber-600 whitespace-nowrap">₹{item.price}</span>
-                    </div>
-                    <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="bg-gray-50 border-b border-gray-100">
+                      <th className="py-4 px-6 font-heading font-bold text-gray-700">Item</th>
+                      <th className="py-4 px-6 font-heading font-bold text-gray-700 hidden sm:table-cell">Description</th>
+                      <th className="py-4 px-6 font-heading font-bold text-gray-700 text-right">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {filtered.map((item, i) => (
+                      <motion.tr
+                        key={item.id}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.3, delay: i * 0.04 }}
+                        className="border-b border-gray-50 hover:bg-gray-50/50 transition-colors"
+                      >
+                        <td className="py-4 px-6">
+                          <div className="flex items-center gap-2">
+                            <h3 className={`font-bold text-gray-900 ${item.isVeg ? 'veg-dot' : 'nonveg-dot'}`}>
+                              {item.name}
+                            </h3>
+                            {item.featured && (
+                              <span className="bg-brand-amber-100 text-brand-amber-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide whitespace-nowrap">Special</span>
+                            )}
+                          </div>
+                          {item.category === 'thali' && (
+                            <p className="text-sm text-gray-500 mt-1 sm:hidden">{item.desc}</p>
+                          )}
+                        </td>
+                        <td className="py-4 px-6 text-sm text-gray-500 hidden sm:table-cell">
+                          {item.category === 'thali' ? item.desc : ''}
+                        </td>
+                        <td className="py-4 px-6 font-heading text-lg font-bold text-brand-amber-600 text-right whitespace-nowrap">
+                          ₹{item.price}
+                        </td>
+                      </motion.tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </motion.div>
           </AnimatePresence>
 

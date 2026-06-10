@@ -2,8 +2,8 @@ export const attractions = [
   {
     id: 1,
     name: 'Sinhagad Fort',
-    distance: '12 km',
-    time: '~30 min drive',
+    distance: '7 km',
+    time: '~20 min drive',
     desc: 'Historic hill fort with panoramic views of the Sahyadri range. Popular trekking spot with food stalls at the top.',
     image: '/images/hero/sinhgad.jpeg'
   },
@@ -18,8 +18,8 @@ export const attractions = [
   {
     id: 3,
     name: 'Shanti Vaan',
-    distance: '5 km',
-    time: '~15 min drive',
+    distance: '1 km',
+    time: '~2 min drive',
     desc: 'Peaceful ashram and meditation center. Ideal for those seeking quiet contemplation and spiritual rest.',
     image: '/images/shantivan.jpeg'
   },
@@ -29,14 +29,6 @@ export const attractions = [
     distance: '20 km',
     time: '~45 min drive',
     desc: 'Scenic dam surrounded by lush hills. Water sports like kayaking and speed boating are available.',
-    image: '/images/hero/placeholder-panshet.jpg'
-  },
-  {
-    id: 5,
-    name: 'Neelkantheshwar Temple',
-    distance: '15 km',
-    time: '~35 min drive',
-    desc: 'Ancient Shiva temple nestled in the hills with peaceful surroundings and scenic trek route.',
-    image: '/images/hero/placeholder-temple.jpg'
+    image: '/images/panshet.jfif'
   },
 ]
