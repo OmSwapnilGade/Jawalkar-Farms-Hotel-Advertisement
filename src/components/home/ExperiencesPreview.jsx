@@ -3,16 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import SectionHeader from '../layout/SectionHeader.jsx'
-
-const images = [
-  '/images/hero/tents.jpeg', // Tent Camping
-  '/images/hero/food.jpeg', // Outdoor Dining (reusing food.jpeg for now)
-  '/images/hero/children pay area.jpeg', // Children's Play Area
-  '/images/hero/greenery scene.jpeg', // Garden Walks
-  '/images/morning1.jpeg', // Family Gatherings
-  '/images/night2.jpeg', // Events & Parties
-  '/images/ChatGPT swim.png' // Swimming Pool
-]
+import { experienceImages } from '../../data/experiences.js'
 
 export default function ExperiencesPreview() {
   const { t } = useLanguage()
@@ -35,7 +26,7 @@ export default function ExperiencesPreview() {
             >
               <div className="rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1.5 bg-white">
                 <div className="h-52 sm:h-56 bg-gray-100 flex items-center justify-center relative overflow-hidden">
-                  <img src={images[i]} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <img src={experienceImages[i]} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="p-6 sm:p-7">
                   <h3 className="font-heading text-lg font-bold text-gray-900 mb-2.5">{item.title}</h3>

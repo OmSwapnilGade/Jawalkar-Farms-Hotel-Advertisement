@@ -13,12 +13,12 @@ export default function HomePage() {
     <>
       <HeroSlider />
       <HighlightsSection />
-      <FacilitiesSection />
       <FoodShowcase />
       <RoomShowcase />
+      <FacilitiesSection />
       <ExperiencesPreview />
       <NearbyPreview />
-      <ReviewsPreview />
+      <ReviewsPreview /> 
       <CTABand />
     </>
   )

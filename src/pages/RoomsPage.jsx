@@ -6,13 +6,7 @@ import PageBanner from '../components/layout/PageBanner.jsx'
 import CTABand from '../components/layout/CTABand.jsx'
 import { fadeUp, slideInLeft, slideInRight } from '../hooks/useAnimations.js'
 import { Link } from 'react-router-dom'
-
-const roomImages = [
-  { gradient: 'from-blue-200 to-indigo-300', label: 'Room View' },
-  { gradient: 'from-sky-200 to-blue-300', label: 'Bed Area' },
-  { gradient: 'from-cyan-200 to-teal-300', label: 'Bathroom' },
-  { gradient: 'from-blue-100 to-sky-200', label: 'Window View' },
-]
+import { galleryImages } from '../data/gallery.js'
 
 const amenityIcons = [Bath, Car, Coffee, TreePine, Droplets]
 
@@ -20,26 +14,23 @@ export default function RoomsPage() {
   const { t } = useLanguage()
   const features = t('room.features')
   const amenities = t('room.amenities')
+  
+  const roomsPhotos = galleryImages.filter(img => img.category === 'rooms')
 
   return (
     <>
       <PageBanner title={t('room.title')} subtitle={t('room.subtitle')} />
 
-      <section className="py-16 sm:py-20 lg:py-28">
+      <section className="py-16 sm:py-20 lg:py-28 overflow-hidden">
         <div className="section-container">
-          {/* Room Gallery */}
+          {/* Room Gallery Carousel */}
           <motion.div {...fadeUp} className="mb-14 lg:mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
-              <div className={`lg:col-span-3 aspect-[16/10] rounded-3xl bg-gradient-to-br ${roomImages[0].gradient} flex items-center justify-center shadow-xl`}>
-                <span className="text-[6rem] sm:text-[8rem]">🛏️</span>
-              </div>
-              <div className="lg:col-span-2 grid grid-cols-3 lg:grid-cols-1 gap-4">
-                {roomImages.slice(1).map((img, i) => (
-                  <div key={i} className={`aspect-[16/10] lg:aspect-auto rounded-2xl bg-gradient-to-br ${img.gradient} flex items-center justify-center`}>
-                    <span className="text-sm font-medium text-gray-500/60">{img.label}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="flex gap-4 sm:gap-6 overflow-x-auto snap-x snap-mandatory pb-6 pt-2 scrollbar-hide -mx-4 px-4 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
+              {roomsPhotos.map((img, i) => (
+                <div key={img.id || i} className="w-[280px] sm:w-[340px] lg:w-[420px] aspect-[16/10] rounded-2xl snap-center shrink-0 overflow-hidden shadow-lg relative bg-gray-100 border border-gray-100">
+                  <img src={img.image} alt={img.alt || 'Room View'} className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
+                </div>
+              ))}
             </div>
           </motion.div>
 

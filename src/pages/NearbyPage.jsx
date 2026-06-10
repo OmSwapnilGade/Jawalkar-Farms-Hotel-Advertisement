@@ -30,10 +30,10 @@ export default function NearbyPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="rounded-2xl overflow-hidden bg-white shadow-card hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300"
+                className="rounded-2xl overflow-hidden bg-white shadow-card hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 group"
               >
-                <div className={`h-48 sm:h-56 bg-gradient-to-br ${gradients[i]} flex items-center justify-center relative`}>
-                  <MapPin size={60} className="text-white/20" />
+                <div className="h-48 sm:h-56 bg-gray-100 flex items-center justify-center relative overflow-hidden">
+                  <img src={place.image} alt={place.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="p-6 sm:p-7">
                   <h3 className="font-heading text-xl font-bold text-gray-900 mb-2">{place.name}</h3>

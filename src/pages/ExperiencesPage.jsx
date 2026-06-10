@@ -3,16 +3,7 @@ import { useLanguage } from '../context/LanguageContext.jsx'
 import PageBanner from '../components/layout/PageBanner.jsx'
 import CTABand from '../components/layout/CTABand.jsx'
 import { slideInLeft, slideInRight } from '../hooks/useAnimations.js'
-
-const gradients = [
-  'from-emerald-300 to-teal-500',
-  'from-amber-300 to-orange-400',
-  'from-sky-300 to-blue-500',
-  'from-green-300 to-emerald-500',
-  'from-rose-300 to-pink-400',
-  'from-violet-300 to-purple-500',
-]
-const emojis = ['⛺', '🍽️', '🎮', '🌿', '👨‍👩‍👧‍👦', '🎉']
+import { experienceImages } from '../data/experiences.js'
 
 export default function ExperiencesPage() {
   const { t } = useLanguage()
@@ -32,8 +23,8 @@ export default function ExperiencesPage() {
                   {...(isEven ? slideInLeft : slideInRight)}
                   className={`${isEven ? 'order-1' : 'order-1 lg:order-2'}`}
                 >
-                  <div className={`aspect-[4/3] rounded-3xl bg-gradient-to-br ${gradients[i]} flex items-center justify-center shadow-xl`}>
-                    <span className="text-[6rem] sm:text-[8rem] opacity-70">{emojis[i]}</span>
+                  <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl bg-gray-100 group">
+                    <img src={experienceImages[i]} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                 </motion.div>
                 <motion.div
